@@ -1,0 +1,198 @@
+section::before{
+    content: '';
+    border: 20px solid transparent;
+    border-left: 20px solid lightskyblue;
+    border-top: 20px solid lightskyblue;
+    }
+.tm-nav-item-link:hover,.tm-section-title.tm-section-title-box.tm-box-bg-title:hover{
+    background-color: lightskyblue;
+    color: white;
+}
+.tm-banner{
+   background:linear-gradient(180deg, burlywood,lightskyblue );
+}
+.tm-banner-inner{
+    background-color:white; 
+    text-shadow:#76cdd7 0px 3px 0px,#76cdd7 0px 11px 2px;
+    word-spacing: 20px;
+    letter-spacing: 5px;
+}
+.tm-banner-text{
+    animation-name: rotation;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+@keyframes rotation {
+    0% {
+        transform:rotate(45deg);
+    }
+    100% {
+        transform:rotate(0deg);
+    }
+}
+.tm-sidebar,  .tm-content-box, .blocks{
+    box-shadow: 0 0 10px rgba(61, 55, 61, 0.7);
+}
+.tm-content-box.flex-2-col{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+div.tm-content-box.flex-2-col .padding-medium.flex-item.tm-team-description-container.flex-item{
+text-align: left;
+padding-top: 210px;
+text-indent: 1.5em; 
+text-align: justify;
+} 
+.padding-medium.flex-item.tm-team-description-container.flex-item{
+    text-align: left;
+    text-indent: 1.5em;
+    text-align: justify;
+}
+h2.tm-section-title{
+    margin-top: 20px;
+}
+section.heading.tm-content-box div.padding-medium h2{
+   text-align: center;
+    
+    color: lightskyblue;
+}
+
+.tm-section-description{
+    font-style: italic;
+}   
+.padding-medium ol{
+    list-style-type: decimal-leading-zero;
+}
+a.text::after{
+    content: "New";
+    color: red;
+    font-size: 8px;
+    font-weight: bold;
+    vertical-align: super;
+}
+.padding-medium li a:hover{
+    font-weight: 900;
+    color: red;
+}
+.padding-medium li a:hover::before{
+    content: ">";
+}
+li.box.box-work p{
+    font-style: italic;
+}
+li.box.box-work p::first-letter{
+    font-weight: bold;
+}
+li.box.box-work:nth-child(odd){
+    border: 8px solid white;
+}
+li.box.box-work:nth-child(even){
+    background-color: lightskyblue;
+    color: white;
+    border: 8px solid rgb(128, 203, 250);
+}
+input#contact_subject.form-control{
+     transition: 0s;
+     background-image: url("../img/email-icon.png");
+     background-position: right;
+     background-size: 30px;
+     background-repeat: no-repeat; 
+}
+div#contact.padding-medium .tm-section-title{
+    text-align:right;
+}
+#contact_name.form-control,#contact_email.form-control,#contact_subject.form-control{
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom:1px solid lightskyblue;
+    
+}
+#contact_name.form-control,#contact_email.form-control,#contact_subject.form-control:focus{
+background-color: rgb(42, 194, 240);
+}
+button.btn.btn-primary.submit-btn{
+    float: right;
+}
+button.btn.btn-primary.submit-btn:hover{
+    background-color: rgb(7, 194, 201);
+}
+@media print{
+    section::before{
+        display: none;
+    }
+    body{
+        margin-top: -100px;
+    }
+    #home.tm-content-box.tm-content-header.margin-b-10{
+        padding: 0;
+        margin: 0;
+    }
+    nav{
+        display: none;
+    }
+    .tm-section-title{
+        text-transform:uppercase;
+    }
+    div.flex-item.tm-team-img{
+        display: none;
+    }
+    li:nth-child(odd) {
+        text-align: left;
+    } 
+    li:nth-child(even) {
+        text-align: right;
+    }
+    section.heading.tm-content-box{
+        margin-top:-100px;
+    }
+    section.heading.tm-content-box ol{
+        margin-left: 150px;
+        margin-right: 200px;
+    }
+    ol{
+        list-style-type: none;
+    }
+    div.tm-content-box.flex-2-col .padding-medium.flex-item.tm-team-description-container.flex-item{
+        padding: 0;
+        margin-right: 110px;
+    }
+    section.blocks .padding-medium.flex-item.tm-team-description-container.flex-item{
+        padding: 0;
+        margin-left: 60px;
+        margin-top: -60px;
+    }
+    a.text::after{
+        display: none;
+    }
+    .padding-medium ol{
+     list-style-type: none;
+    }
+    ul.boxes.gallery-container{
+        display: none;
+    }
+    h2.tm-section-title{
+        text-align: center;
+    }
+    .padding-medium.flex-item.tm-team-description-container.flex-item{
+        text-align: center;
+        margin-top: -25px;
+    }
+    #tmCarousel.carousel.slide.tm-content-box{
+        padding: 0;
+        margin-top: -60px;
+    }
+    img.img-fluid.img-contact-us{
+        display: none;
+    }
+    #contact.padding-medium{
+        display: none;
+    }
+    footer{
+        padding: 0;
+        margin-top: -40px;
+    }
+}
